@@ -10,6 +10,7 @@ description:         'Golang Tour'
 url:                 https://golang.org
 baseurl:             '/go'
 paginate:            5
+resource:            '/docs'
 
 # About/contact
 author:
