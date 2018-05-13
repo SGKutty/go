@@ -3,9 +3,7 @@ layout: page
 title: Setup
 ---
 
-# Install the Go tools
-
-## ✰ Linux, Mac OS X, and FreeBSD tarballs:
+### ✰ Linux, Mac OS X, and FreeBSD tarballs:
 
 * [Download the archive](https://golang.org/dl/) and extract it into `/usr/local` and creating a Go tree in `/usr/local/go`
 
@@ -28,7 +26,7 @@ title: Setup
      ```
      &nbsp;
 
-## ✰ Installing to a custom location
+### ✰ Installing to a custom location
 
 * The Go binary distributions assume they will be installed in `/usr/local/go`, but it is possible to install the Go tools to a different location. 
 
@@ -41,7 +39,7 @@ title: Setup
    export PATH=$PATH:$GOROOT/bin
    ```
 
-## ✰  Test your installation
+### ✰  Test your installation
 
 * Check that Go is installed correctly by setting up a workspace and building a simple program, as follows.
 
