@@ -15,8 +15,11 @@ resource:            '/docs'
 # About/contact
 author:
   name:              Georgekutty Joyes
-  url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+
+# Github
+
+github:
+  repo:             https://github.com/SGKutty/go
 
 # Custom vars
 version:             1.0.0
