@@ -3,6 +3,10 @@
         "GOPATH",
         "GOROOT",
         "Kernighan",
-        "Printf"
+        "Printf",
+        "firewalled",
+        "markdownlint",
+        "microservices",
+        "unexporting"
     ]
 }

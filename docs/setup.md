@@ -3,7 +3,8 @@ layout: page
 title: Setup
 ---
 
-&nbsp;
+***
+<!-- markdownlint-disable MD002 -->
 
 ## ✰ Linux, Mac OS X, and FreeBSD tarballs:
 
