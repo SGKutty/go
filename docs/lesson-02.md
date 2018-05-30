@@ -36,4 +36,6 @@ title: Packaging
 
 * Given that packages are standalone and their contents are `firewalled` there needs to be a way to `open` parts of the package to the outside world. This is where the idea of `exporting` and `unexporting` comes in.
 
-* There is one more important language mechanic about Go packages. Two packages can’t cross-import each other. Imports are a one way street. As a result, when two packages need to import each other, it’s a smell that the packages need to be merged or decoupled.
+* There is one more important language mechanic about Go packages. Two packages can’t `cross-import` each other. Imports are a one way street. As a result, when two packages need to import each other, it’s a smell that the packages need to be merged or decoupled.
+
+## ✰ Design Philosophies
