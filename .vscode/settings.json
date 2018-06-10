@@ -5,8 +5,12 @@
         "Kernighan",
         "Printf",
         "firewalled",
+        "gocode",
+        "golib",
+        "kutty",
         "markdownlint",
         "microservices",
-        "unexporting"
+        "unexporting",
+        "workspaces"
     ]
 }
