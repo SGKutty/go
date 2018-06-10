@@ -120,4 +120,10 @@ title: Setup
 
 * My third workspace is dedicated to the **private Go packages** from my work, and their dependencies. It's convenient to have my work packages separate from all my personal stuff, so they don't get in each other's way.
 
-* With that setup, multiple GOPATH workspaces feel a lot like `namespaces`. The reason I have more than one, to me, is quite similar why one might want to break a medium-sized Go package into several `.go` files. The result is effectively the same since multiple .go files share the same scope but allow one to have `namespaces`.
+  ```sh
+  export GOPATH=$GOPATH:/home/kutty/gopbm
+  ```
+
+* With that setup, multiple GOPATH workspaces feel a lot like `namespaces`. The reason I have more than one, to me, is quite similar why one might want to break a medium-sized Go package into several `.go` files.
+
+* The result is effectively the same since multiple .go files share the same scope but allow one to have `namespaces`.
