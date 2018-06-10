@@ -6,7 +6,7 @@ title: Setup
 ***
 <!-- markdownlint-disable MD002 -->
 
-## ✰ Linux, Mac OS X, and FreeBSD tarballs:
+## ✰ Linux, Mac OS X, and FreeBSD tarballs
 
 ***
 
@@ -16,7 +16,7 @@ title: Setup
     tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
   ```
 
-* Choose the archive file appropriate for your installation. 
+* Choose the archive file appropriate for your installation.
 
 * If you are installing Go version `1.10.1` for [64-bit x86](https://golang.org/dl) on Linux, The archive you want is called   `go1.10.1.linux-amd64.tar.gz`.
 
