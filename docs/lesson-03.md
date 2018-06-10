@@ -1,19 +1,21 @@
 ---
 layout: page
-title: String to Integer
+title: String to Int
 ---
 
 ***
+&nbsp;
 
 > A string contains digit characters like `123`. We can convert this string to a number (an `int`) with using methods `ParseInt`, `Atoi` from `strconv` package.
 
 <!-- markdownlint-disable MD002 -->
+&nbsp;
 
 ## ✰ ParseInt
 
 ***
 
-* Go [program](https://play.golang.org/p/S3OQYXWocQC) that uses **strconv.ParseInt**
+* Go [program](https://play.golang.org/p/S3OQYXWocQC) that uses **strconv.ParseInt**.
 
     ```go
         package main
@@ -47,12 +49,15 @@ title: String to Integer
 * The `bitSize` argument specifies the integer type that the result must fit into. Bit sizes 0, 8, 16, 32, and 64 correspond to int, int8, int16, int32, and int64. For a bitSize below 0 or above 64 an error is returned.
 
 <!-- markdownlint-disable MD002 -->
+&nbsp;
 
 ## ✰ Atoi
 
 ***
 
 * This function bears the same name as the one from the `C` standard library. In Go it invokes ParseInt with a base of 10 and a bit size of 0.
+
+* Go [program](https://play.golang.org/p/S3OQYXWocQC) that uses **strconv.Atoi**.
 
     ```go
         package main
@@ -78,14 +83,15 @@ title: String to Integer
             }
         }
     ```
+&nbsp;
 
 ## ✰ Benchmark test
 
 ***
 
-* Often we need to convert a string into an integer. This benchmark compares `ParseInt` and `Atoi`. It converts `1234` into an integer with each method.
+* Often we need to convert a string into an integer. This benchmark compares `ParseInt` and `Atoi`. It converts `"1234"` into an integer with each method.
 
-* This test based on go version `go1.10.1 linux/amd64`
+* This test based on go version `go1.10.1 linux/amd64`.
 
     ```go
         package main
