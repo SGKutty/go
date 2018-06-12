@@ -95,35 +95,31 @@ title: Setup
 
 * I do make use of the fact that the GOPATH environment variable is defined as a list of places rather than a single folder.
 
-* From [GOPATH environment variable](https://golang.org/cmd/go/#hdr-GOPATH_environment_variable),
+* The [GOPATH](https://golang.org/cmd/go/#hdr-GOPATH_environment_variable) environment variable lists places to look for Go code. On Unix, the value is a colon-separated string. On Windows, the value is a semicolon-separated string.
 
-  > The GOPATH environment variable lists places to look for Go code. On Unix, the value is a colon-separated string. On Windows, the value is a semicolon-separated string.
+* My GOPATH consists of 3 `workspaces`, The **first** one is my **landing workspace**. Since it's listed first, whenever I go get any new package, it always ends up in this workspace.
 
-* My GOPATH consists of 3 folders or GOPATH `workspaces`.
-
-* The first one is my **landing workspace**. Since it's listed first, whenever I go get any new package, it always ends up in this workspace.
-
-  > Go searches each directory listed in GOPATH to find source code, but new packages are always downloaded into the first directory in the list.
+* Go searches each directory listed in GOPATH to find source code, but new packages are always downloaded into the first directory in the list.
 
   ```sh
   export GOPATH=/home/kutty/golib
   export PATH=$PATH:$GOPATH/bin
   ```
 
-* I make it a rule to never do any development in there, so it's always completely safe to clean this folder whenever it gets too large. After all, it only has Go packages that I can get again with `go get`.
+* I make it a rule to never do any development in there, so it's always completely safe to clean this folder whenever it gets too large.
 
-* My second workspace is for **all my personal Go packages** and any other packages I may want to favorite or do some development on. I move things I use regularly from first workspace into second.
+* My **second** workspace is for **all my personal Go packages** and any other packages I may want to favorite or do some development on.
 
   ```sh
   export GOPATH=$GOPATH:/home/kutty/gocode
   ```
 
-* My third workspace is dedicated to the **private Go packages** from my work, and their dependencies. It's convenient to have my work packages separate from all my personal stuff, so they don't get in each other's way.
+* My **third** workspace is dedicated to the **private Go packages** from my work, and their dependencies. It's convenient to have my work packages separate from all my personal stuff.
 
   ```sh
   export GOPATH=$GOPATH:/home/kutty/gopbm
   ```
 
-* With that setup, multiple GOPATH workspaces feel a lot like `namespaces`. The reason I have more than one, to me, is quite similar why one might want to break a medium-sized Go package into several `.go` files.
+* With that setup, multiple GOPATH workspaces feel a lot like `namespaces`. The reason I have more than one is quite similar why one might want to break a large Go package into several `.go` files.
 
 * The result is effectively the same since multiple .go files share the same scope but allow one to have `namespaces`.
