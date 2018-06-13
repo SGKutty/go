@@ -11,19 +11,18 @@ title: Execute external command
 * In this sample, execute `touch` command on Linux to create a file `panda.txt`, by golang.
 
     ```go
-        package main
+    package main
 
-        import (
-            "fmt"
-            "os/exec"
-        )
+    import (
+        "fmt"
+        "os/exec"
+    )
 
-        func main() {
-            cmd := exec.Command("touch", "panda.txt")
-            err := cmd.Run()
-            if err != nil {
-                fmt.Printf("Error occurs")
-            }
+    func main() {
+        cmd := exec.Command("touch", "panda.txt")
+        err := cmd.Run()
+        if err != nil {
+            fmt.Printf("Error occurs")
         }
-
+    }
     ```

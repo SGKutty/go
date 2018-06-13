@@ -42,11 +42,15 @@ title: Packaging
 
 ◉ __Purpose__
 
+***
+
 * To be `purposeful`, packages must provide, not contain.
 
 * Package must be named with the `intent` to describe what it provides.
 
 ◉ __Usability__
+
+***
 
 * To be `usable`, packages must be designed with the user as their focus.
 
@@ -61,6 +65,8 @@ title: Packaging
 * Packages must reduce, minimize and simplify its code base.
 
 ◉ __Portability__
+
+***
 
 * To be `portable`, packages must be designed with reusability in mind.
 

@@ -160,17 +160,15 @@ code {
   border-radius: 3px;
 }
 pre {
-  display: block;
+  padding: 0.8rem 0.8rem 0.8rem 0.0rem;
   margin-top: 0;
   margin-bottom: 1rem;
-  padding: 0.8rem;
-  font-size: .9rem;
-  line-height: 1.45;
-  white-space: pre;
-  white-space: pre-wrap;
-  word-break: break-all;
-  word-wrap: break-word;
-  background-color: #f6f8fa;
+  font-size: .8rem;
+  color: #567482;
+  word-wrap: 1rem;
+  background-color: #f3f6fa;
+  border: solid 1px #dce6f0;
+  overflow: auto;
 }
 pre code {
   padding: 0;

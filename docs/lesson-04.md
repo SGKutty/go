@@ -20,24 +20,24 @@ title: Int to String
 * Go [program](https://play.golang.org/p/UQNe9Hga47C) that uses **strconv.FormatInt**.
 
     ```go
-        package main
+    package main
 
-        import (
-            "fmt"
-            "strconv"
-        )
+    import (
+        "fmt"
+        "strconv"
+    )
 
-        func main() {
-            v := int64(-42)
+    func main() {
+        v := int64(-42)
 
-            //convert with base 10
-            s10 := strconv.FormatInt(v, 10)
-            fmt.Printf("%T, %v\n", s10, s10)
+        //convert with base 10
+        s10 := strconv.FormatInt(v, 10)
+        fmt.Printf("%T, %v\n", s10, s10)
 
-            // convert with base 64
-            s16 := strconv.FormatInt(v, 16)
-            fmt.Printf("%T, %v\n", s16, s16)
-        }
+        // convert with base 64
+        s16 := strconv.FormatInt(v, 16)
+        fmt.Printf("%T, %v\n", s16, s16)
+    }
     ```
 
 * FormatInt returns the string representation of i in the given base, for 2 <= base <= 36. The result uses the lower-case letters 'a' to 'z' for digit values >= 10.
@@ -54,18 +54,18 @@ title: Int to String
 * Go [program](https://play.golang.org/p/gV0vpFrVbUK) that uses **strconv.Itoa**
 
     ```go
-        package main
+    package main
 
-        import (
-            "fmt"
-            "strconv"
-        )
+    import (
+        "fmt"
+        "strconv"
+    )
 
-        func main() {
-            i := 10
-            s := strconv.Itoa(i)
-            fmt.Printf("%T, %v\n", s, s)
-        }
+    func main() {
+        i := 10
+        s := strconv.Itoa(i)
+        fmt.Printf("%T, %v\n", s, s)
+    }
     ```
 &nbsp;
 
@@ -78,41 +78,41 @@ title: Int to String
 * This test based on go version `go1.10.1 linux/amd64`
 
     ```go
-        package main
+    package main
 
-        import (
-            "runtime"
-            "strconv"
-            "testing"
-        )
+    import (
+        "runtime"
+        "strconv"
+        "testing"
+    )
 
-        var val = 1234
+    var val = 1234
 
-        // BenchmarkItoa check performance of Itoa
-        func BenchmarkItoa(b *testing.B) {
+    // BenchmarkItoa check performance of Itoa
+    func BenchmarkItoa(b *testing.B) {
 
-            // run garbage collector and reset timer
-            runtime.GC()
-            b.ResetTimer()
+        // run garbage collector and reset timer
+        runtime.GC()
+        b.ResetTimer()
 
-            // use Itoa
-            for i := 0; i < b.N; i++ {
-                _ = strconv.Itoa(val)
-            }
+        // use Itoa
+        for i := 0; i < b.N; i++ {
+            _ = strconv.Itoa(val)
         }
+    }
 
-        // BenchmarkFormatInt check performance of FormatInt
-        func BenchmarkFormatInt(b *testing.B) {
+    // BenchmarkFormatInt check performance of FormatInt
+    func BenchmarkFormatInt(b *testing.B) {
 
-            // run garbage collector and reset timer
-            runtime.GC()
-            b.ResetTimer()
+        // run garbage collector and reset timer
+        runtime.GC()
+        b.ResetTimer()
 
-            // use ParseInt
-            for i := 0; i < b.N; i++ {
-                _ = strconv.FormatInt(int64(val), 10)
-            }
+        // use ParseInt
+        for i := 0; i < b.N; i++ {
+            _ = strconv.FormatInt(int64(val), 10)
         }
+    }
     ```
 
 * Result

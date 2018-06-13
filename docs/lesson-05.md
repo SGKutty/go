@@ -17,20 +17,20 @@ title: String Concatenation
 * [Play ground](https://play.golang.org/p/YIPv0mLSsRb)
 
     ```go
-        package main
+    package main
 
-        import (
-            "bytes"
-            "fmt"
-        )
+    import (
+        "bytes"
+        "fmt"
+    )
 
-        func main() {
-            var buffer bytes.Buffer
+    func main() {
+        var buffer bytes.Buffer
 
-            for i := 0; i < 100; i++ {
-                buffer.WriteString("a")
-            }
-
-            fmt.Println(buffer.String())
+        for i := 0; i < 100; i++ {
+            buffer.WriteString("a")
         }
+
+        fmt.Println(buffer.String())
+    }
     ```

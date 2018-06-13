@@ -13,7 +13,7 @@ title: Setup
 * [Download the archive](https://golang.org/dl/) and extract it into `/usr/local` and creating a Go tree in `/usr/local/go`.
 
   ```sh
-    tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
+  tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
   ```
 
 * Choose the archive file appropriate for your installation.
@@ -26,9 +26,10 @@ title: Setup
 
 * You can do this by adding this line to `/etc/profile` (system-wide) or `$HOME/.profile`
 
-     ```sh
-       export PATH=$PATH:/usr/local/go/bin
-     ```
+  ```sh
+  export PATH=$PATH:/usr/local/go/bin
+  ```
+
 &nbsp;
 
 ## ✰ Installing to a custom location
@@ -41,10 +42,10 @@ title: Setup
 
 * For example, if you installed Go to your `Home` directory you should add commands like the following to `$HOME/.profile`.
 
-   ```sh
-   export GOROOT=$HOME/go1.X
-   export PATH=$PATH:$GOROOT/bin
-   ```
+  ```sh
+  export GOROOT=$HOME/go1.X
+  export PATH=$PATH:$GOROOT/bin
+  ```
 
 &nbsp;
 
@@ -60,27 +61,27 @@ title: Setup
 
 * Next, make the directory `src/test` inside your [workspace](https://golang.org/doc/code.html#Workspaces) and in that directory create a file named `hello.go` that looks like:
 
-    ```golang
-    package main
+  ```golang
+  package main
 
-    import "fmt"
+  import "fmt"
 
-    func main() {
-      fmt.Printf("Welcome to Golang")
-    }
-    ```
+  func main() {
+    fmt.Printf("Welcome to Golang")
+  }
+  ```
 
 * Then build it with the go tool
 
-    ```sh
-      cd $GOPATH/src/test
-      go build
-    ```
+  ```sh
+  cd $GOPATH/src/test
+  go build
+  ```
 
 * The command above will build an executable named `test` in the directory alongside your source code. Execute it to see the greeting.
 
   ```sh
-   ./test
+  ./test
   ```
 
 * If you see the `Welcome to Golang` message then your Go installation is successful.

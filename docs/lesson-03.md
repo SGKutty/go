@@ -18,28 +18,28 @@ title: String to Int
 * Go [program](https://play.golang.org/p/S3OQYXWocQC) that uses **strconv.ParseInt**.
 
     ```go
-        package main
+    package main
 
-        import (
-            "fmt"
-            "strconv"
-        )
+    import (
+        "fmt"
+        "strconv"
+    )
 
-        func main() {
-            value := "123"
+    func main() {
+        value := "123"
 
-            // convert string to int
-            number, err := strconv.ParseInt(value, 10, 0)
-            if err != nil {
-                fmt.Println(err)
-            }
-
-            // we now have an int
-            fmt.Println("Result:", number)
-            if number == 123 {
-                fmt.Println("Is number:", true)
-            }
+        // convert string to int
+        number, err := strconv.ParseInt(value, 10, 0)
+        if err != nil {
+            fmt.Println(err)
         }
+
+        // we now have an int
+        fmt.Println("Result:", number)
+        if number == 123 {
+            fmt.Println("Is number:", true)
+        }
+    }
     ```
 
 * ParseInt interprets a string `s` in the given `base` (0, 2 to 36) and bit `size` (0 to 64) and returns the corresponding value i.
@@ -60,28 +60,28 @@ title: String to Int
 * Go [program](https://play.golang.org/p/S3OQYXWocQC) that uses **strconv.Atoi**.
 
     ```go
-        package main
+    package main
 
-        import (
-            "fmt"
-            "strconv"
-        )
+    import (
+        "fmt"
+        "strconv"
+    )
 
-        func main() {
-            value := "123"
+    func main() {
+        value := "123"
 
-            // convert string to int
-            number, err := strconv.Atoi(value)
-            if err != nil {
-                fmt.Println(err)
-            }
-
-            // we now have an int
-            fmt.Println("Result:", number)
-            if number == 123 {
-                fmt.Println("Is number:", true)
-            }
+        // convert string to int
+        number, err := strconv.Atoi(value)
+        if err != nil {
+            fmt.Println(err)
         }
+
+        // we now have an int
+        fmt.Println("Result:", number)
+        if number == 123 {
+            fmt.Println("Is number:", true)
+        }
+    }
     ```
 &nbsp;
 
@@ -94,48 +94,48 @@ title: String to Int
 * This test based on go version `go1.10.1 linux/amd64`.
 
     ```go
-        package main
+    package main
 
-        import (
-            "log"
-            "runtime"
-            "strconv"
-            "testing"
-        )
+    import (
+        "log"
+        "runtime"
+        "strconv"
+        "testing"
+    )
 
-        var val = "1234"
+    var val = "1234"
 
-        // BenchmarkAtoi check performance of Atoi
-        func BenchmarkAtoi(b *testing.B) {
+    // BenchmarkAtoi check performance of Atoi
+    func BenchmarkAtoi(b *testing.B) {
 
-            // run garbage collector and reset timer
-            runtime.GC()
-            b.ResetTimer()
+        // run garbage collector and reset timer
+        runtime.GC()
+        b.ResetTimer()
 
-            // use Atoi
-            for i := 0; i < b.N; i++ {
-                _, err := strconv.Atoi(val)
-                if err != nil {
-                    log.Fatal(err)
-                }
+        // use Atoi
+        for i := 0; i < b.N; i++ {
+            _, err := strconv.Atoi(val)
+            if err != nil {
+                log.Fatal(err)
             }
         }
+    }
 
-        // BenchmarkParseInt check performance of ParseInt
-        func BenchmarkParseInt(b *testing.B) {
+    // BenchmarkParseInt check performance of ParseInt
+    func BenchmarkParseInt(b *testing.B) {
 
-            // run garbage collector and reset timer
-            runtime.GC()
-            b.ResetTimer()
+        // run garbage collector and reset timer
+        runtime.GC()
+        b.ResetTimer()
 
-            // use ParseInt
-            for i := 0; i < b.N; i++ {
-                _, err := strconv.ParseInt(val, 10, 0)
-                if err != nil {
-                    log.Fatal(err)
-                }
+        // use ParseInt
+        for i := 0; i < b.N; i++ {
+            _, err := strconv.ParseInt(val, 10, 0)
+            if err != nil {
+                log.Fatal(err)
             }
         }
+    }
     ```
 
 * Result
