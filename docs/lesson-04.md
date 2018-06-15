@@ -1,123 +1,77 @@
 ---
 layout: page
-title: Int to String
+title: Packaging
 ---
-
 ***
-&nbsp;
-
-> We can convert this int to string by using methods `Itoa`, `FormatInt` from `strconv` package.
 
 <!-- markdownlint-disable MD002 -->
+
+> `Brian Kernighan` said,  I think that the real problem with C is that it doesn’t give you enough mechanisms for structuring really big programs. You can `simulate` **Object Oriented Programming** or other **methodology** if you want, but the compiler, the language itself isn’t giving you any help.
+
 &nbsp;
 
-## ✰ FormatInt
+* **Packaging** creates `firewalls` within Go programs such that:
+
+  * The various pieces of the program can be kept apart.
+  * Large teams can work on large projects.
+  * The compiler and the language itself can provide support and help.
+
+&nbsp;
+
+## ✰ Language Mechanics
 
 ***
 
-* This is the opposite conversion as ParseInt. With FormatInt, we must pass an int64 value.
+* In __Go__, each folder that contains source code is considered a package, and packages provide that `firewall`. Go turns each package into an individual `static` library, and it’s the static library that creates the physical `firewall`.
 
-* Go [program](https://play.golang.org/p/UQNe9Hga47C) that uses **strconv.FormatInt**.
+* This behavior is not something you can `circumvent`, it’s built into the language. The creation of static libraries in other languages is optional and achieved through tooling. You can think of packaging as applying the idea of `microservices` on a source tree. Each folder representing a self contained piece of functionality.
 
-    ```go
-    package main
+* In other languages, the source tree represents a `monolithic` application. If you want to break up the application, you need to create multiple source trees and use tooling to stitch it back together.
 
-    import (
-        "fmt"
-        "strconv"
-    )
+* Go has `no` concept of `sub-packages`. All folders, regardless of their physical location, are built into these static libraries and flattened out during compilation.
 
-    func main() {
-        v := int64(-42)
+* Given that packages are standalone and their contents are `firewalled` there needs to be a way to open parts of the package to the outside world. This is where the idea of `exporting` and `unexporting` comes in.
 
-        //convert with base 10
-        s10 := strconv.FormatInt(v, 10)
-        fmt.Printf("%T, %v\n", s10, s10)
+* There is one more important language mechanic about Go packages. Two packages can’t `cross-import` each other. Imports are a one way street. As a result, when two packages need to import each other, it’s a smell that the packages need to be merged or decoupled.
 
-        // convert with base 64
-        s16 := strconv.FormatInt(v, 16)
-        fmt.Printf("%T, %v\n", s16, s16)
-    }
-    ```
-
-* FormatInt returns the string representation of i in the given base, for 2 <= base <= 36. The result uses the lower-case letters 'a' to 'z' for digit values >= 10.
-
-<!-- markdownlint-disable MD002 -->
 &nbsp;
 
-## ✰ Itoa
+## ✰ Design Philosophies
 
 ***
 
-* Itoa is shorthand for FormatInt(int64(i), 10).
-
-* Go [program](https://play.golang.org/p/gV0vpFrVbUK) that uses **strconv.Itoa**
-
-    ```go
-    package main
-
-    import (
-        "fmt"
-        "strconv"
-    )
-
-    func main() {
-        i := 10
-        s := strconv.Itoa(i)
-        fmt.Printf("%T, %v\n", s, s)
-    }
-    ```
-&nbsp;
-
-## ✰ Benchmark test
+◉ __Purpose__
 
 ***
 
-* Often we need to convert an int into a string. This benchmark compares `FormatInt` and `Itoa`. It converts `1234` into a string with each method.
+* To be `purposeful`, packages must provide, not contain.
 
-* This test based on go version `go1.10.1 linux/amd64`
+* Package must be named with the `intent` to describe what it provides.
 
-    ```go
-    package main
+◉ __Usability__
 
-    import (
-        "runtime"
-        "strconv"
-        "testing"
-    )
+***
 
-    var val = 1234
+* To be `usable`, packages must be designed with the user as their focus.
 
-    // BenchmarkItoa check performance of Itoa
-    func BenchmarkItoa(b *testing.B) {
+* Package must be `intuitive` and simple to use.
 
-        // run garbage collector and reset timer
-        runtime.GC()
-        b.ResetTimer()
+* Packages must `respect` their `impact` on resources and performance.
 
-        // use Itoa
-        for i := 0; i < b.N; i++ {
-            _ = strconv.Itoa(val)
-        }
-    }
+* Packages must `protect` the user's application from cascading changes.
 
-    // BenchmarkFormatInt check performance of FormatInt
-    func BenchmarkFormatInt(b *testing.B) {
+* Packages must `prevent` the need for type assertion to be concrete.
 
-        // run garbage collector and reset timer
-        runtime.GC()
-        b.ResetTimer()
+* Packages must reduce, minimize and simplify its code base.
 
-        // use ParseInt
-        for i := 0; i < b.N; i++ {
-            _ = strconv.FormatInt(int64(val), 10)
-        }
-    }
-    ```
+◉ __Portability__
 
-* Result
+***
 
-  ```sh
-    BenchmarkItoa-4        50000000     62.0 ns/op
-    BenchmarkFormatInt-4   100000000    58.1 ns/op
-  ```
+* To be `portable`, packages must be designed with reusability in mind.
+
+* Packages must aspire for the highest level of portability.
+
+* Packages must reduce taking on `opinions` when it's reasonable and practical.
+
+* Packages must not become a single point of dependency.
