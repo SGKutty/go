@@ -8,7 +8,7 @@ title:               Golang
 tagline:             'Tour'
 description:         'Golang Tour'
 url:                 https://golang.org
-baseurl:             '/go'
+baseurl:             '/go-tour'
 paginate:            5
 resource:            '/docs'
 
@@ -19,7 +19,7 @@ author:
 # Github
 
 github:
-  repo:             https://github.com/SGKutty/go
+  repo:             https://github.com/SGKutty/go-tour
 
 # Custom vars
 version:             1.0.0
