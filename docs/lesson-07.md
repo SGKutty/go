@@ -1,6 +1,6 @@
 ---
 layout: page
-title: String Concatenation
+title: 07 - String Concatenation
 ---
 
 ***

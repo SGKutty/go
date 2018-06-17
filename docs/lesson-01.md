@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Setup
+title: 01 - Setup
 ---
 
 ***
@@ -13,7 +13,7 @@ title: Setup
 * [Download the archive](https://golang.org/dl/) and extract it into `/usr/local` and creating a Go tree in `/usr/local/go`.
 
   ```sh
-  tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
+    tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
   ```
 
 * Choose the archive file appropriate for your installation.
@@ -27,7 +27,7 @@ title: Setup
 * You can do this by adding this line to `/etc/profile` (system-wide) or `$HOME/.profile`
 
   ```sh
-  export PATH=$PATH:/usr/local/go/bin
+    export PATH=$PATH:/usr/local/go/bin
   ```
 
 &nbsp;
@@ -43,8 +43,8 @@ title: Setup
 * For example, if you installed Go to your `Home` directory you should add commands like the following to `$HOME/.profile`.
 
   ```sh
-  export GOROOT=$HOME/go1.X
-  export PATH=$PATH:$GOROOT/bin
+    export GOROOT=$HOME/go1.X
+    export PATH=$PATH:$GOROOT/bin
   ```
 
 &nbsp;
@@ -62,26 +62,26 @@ title: Setup
 * Next, make the directory `src/test` inside your [workspace](https://golang.org/doc/code.html#Workspaces) and in that directory create a file named `hello.go` that looks like:
 
   ```golang
-  package main
+    package main
 
-  import "fmt"
+    import "fmt"
 
-  func main() {
-    fmt.Printf("Welcome to Golang")
-  }
+    func main() {
+      fmt.Printf("Welcome to Golang")
+    }
   ```
 
 * Then build it with the go tool
 
   ```sh
-  cd $GOPATH/src/test
-  go build
+    cd $GOPATH/src/test
+    go build
   ```
 
 * The command above will build an executable named `test` in the directory alongside your source code. Execute it to see the greeting.
 
   ```sh
-  ./test
+   ./test
   ```
 
 * If you see the `Welcome to Golang` message then your Go installation is successful.
@@ -103,8 +103,8 @@ title: Setup
 * Go searches each directory listed in GOPATH to find source code, but new packages are always downloaded into the first directory in the list.
 
   ```sh
-  export GOPATH=/home/kutty/golib
-  export PATH=$PATH:$GOPATH/bin
+    export GOPATH=/home/kutty/golib
+    export PATH=$PATH:$GOPATH/bin
   ```
 
 * I make it a rule to never do any development in there, so it's always completely safe to clean this folder whenever it gets too large.
@@ -112,13 +112,13 @@ title: Setup
 * My **second** workspace is for **all my personal Go packages** and any other packages I may want to favorite or do some development on.
 
   ```sh
-  export GOPATH=$GOPATH:/home/kutty/gocode
+    export GOPATH=$GOPATH:/home/kutty/gocode
   ```
 
 * My **third** workspace is dedicated to the **private Go packages** from my work, and their dependencies. It's convenient to have my work packages separate from all my personal stuff.
 
   ```sh
-  export GOPATH=$GOPATH:/home/kutty/gopbm
+   export GOPATH=$GOPATH:/home/kutty/gopbm
   ```
 
 * With that setup, multiple GOPATH workspaces feel a lot like `namespaces`. The reason I have more than one is quite similar why one might want to break a large Go package into several `.go` files.
