@@ -9,7 +9,7 @@ tagline:             'Tour'
 description:         'Golang Tour'
 url:                 https://golang.org
 baseurl:             '/go-tour'
-paginate:            5
+paginate:            20
 resource:            '/docs'
 
 # About/contact
