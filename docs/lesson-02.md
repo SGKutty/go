@@ -36,6 +36,6 @@ title: 02 - Why a new language
 
 * When `Concurrency` come to display all above languages getting down.
 
-* Concurrency is [different](https://blog.golang.org/concurrency-is-not-parallelism) than parallelism.
+* Concurrency is different than parallelism([blog](https://blog.golang.org/concurrency-is-not-parallelism)).
 
 * Concurrency is about dealing with lots of things at once. Parallelism is about doing lots of things at once - Rob Pike
