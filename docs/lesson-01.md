@@ -6,7 +6,7 @@ title: 01 - Setup
 ***
 <!-- markdownlint-disable MD002 -->
 
-## ✰ Linux, Mac OS X, and FreeBSD tarballs
+## Linux, Mac OS X, and FreeBSD tarballs
 
 ***
 
@@ -18,13 +18,13 @@ title: 01 - Setup
 
 * Choose the archive file appropriate for your installation.
 
-* If you are installing Go version `1.10.1` for [64-bit x86](https://golang.org/dl) on Linux, The archive you want is called   `go1.10.1.linux-amd64.tar.gz`.
+* If you are installing Go version `1.10.1` for [64-bit x86](https://golang.org/dl) on Linux, The archive you want is called   go1.10.1.linux-amd64.tar.gz.
 
-* Typically these commands must be run as root or through `sudo`.
+* Typically these commands must be run as root or through sudo.
 
 * Add `/usr/local/go/bin` to the PATH environment variable.
 
-* You can do this by adding this line to `/etc/profile` (system-wide) or `$HOME/.profile`
+* You can do this by adding this line to /etc/profile (system-wide) or $HOME/.profile.
 
   ```sh
     export PATH=$PATH:/usr/local/go/bin
@@ -32,7 +32,7 @@ title: 01 - Setup
 
 &nbsp;
 
-## ✰ Installing to a custom location
+## Installing to a custom location
 
 ***
 
@@ -40,7 +40,7 @@ title: 01 - Setup
 
 * In this case you must set the `GOROOT` environment variable to point to the directory in which it was installed.
 
-* For example, if you installed Go to your `Home` directory you should add commands like the following to `$HOME/.profile`.
+  * For example, if you installed Go to your home directory you should add commands like the following to $HOME/.profile:
 
   ```sh
     export GOROOT=$HOME/go1.X
@@ -49,7 +49,7 @@ title: 01 - Setup
 
 &nbsp;
 
-## ✰  Test your installation
+## Test your installation
 
 ***
 
@@ -84,11 +84,11 @@ title: 01 - Setup
    ./test
   ```
 
-* If you see the `Welcome to Golang` message then your Go installation is successful.
+* If you see the __Welcome to Golang__ message then your Go installation is successful.
 
 &nbsp;
 
-## ✰ How I use GOPATH with multiple workspace
+## How I use GOPATH with multiple workspace
 
 ***
 
@@ -121,6 +121,6 @@ title: 01 - Setup
    export GOPATH=$GOPATH:/home/kutty/gopbm
   ```
 
-* With that setup, multiple GOPATH workspaces feel a lot like `namespaces`. The reason I have more than one is quite similar why one might want to break a large Go package into several `.go` files.
+* With that setup, multiple GOPATH workspaces feel a lot like namespaces. The reason I have more than one is quite similar why one might want to break a large Go package into several __.go__ files.
 
-* The result is effectively the same since multiple .go files share the same scope but allow one to have `namespaces`.
+* The result is effectively the same since multiple __.go__ files share the same scope but allow one to have __namespaces__.

@@ -16,28 +16,26 @@ title: 02 - Why a new language
 
 &nbsp;
 
-✰ The **Problems** related to these languages are:
+## The Problems related to these languages
 
 ***
 
-* `Java` have Increasingly complex type system.
+* __Java__ have Increasingly complex type system.
 
     ![java](https://github.com/g-kutty/go-tour/blob/gh-pages/images/java.png?raw=true)
 
-* `Python` is easy to use, but slow(interpreted language).
+* __Python__ is easy to use, but slow(interpreted language).
 
     ![python](https://github.com/g-kutty/go-tour/blob/gh-pages/images/python.png?raw=true)
 
-* `C/C++` have complex type system, also slow compile times.
+* __C/C++__ have complex type system, also slow compile times.
 
     ![c/c++](https://raw.githubusercontent.com/g-kutty/go-tour/gh-pages/images/c_c%2B%2B.png)
 
 &nbsp;
 
-✰ When **Concurrency** come to display all above languages getting down.
+* When `Concurrency` come to display all above languages getting down.
 
-***
+* Concurrency is [different](https://blog.golang.org/concurrency-is-not-parallelism) than parallelism.
 
-* `Concurrency` is [different](https://blog.golang.org/concurrency-is-not-parallelism) than parallelism.
-
-* Concurrency is about dealing with lots of things at once. Parallelism is about doing lots of things at once - `Rob Pike`
+* Concurrency is about dealing with lots of things at once. Parallelism is about doing lots of things at once - Rob Pike

@@ -18,7 +18,7 @@ title: 04 - Packaging
 
 &nbsp;
 
-## ✰ Language Mechanics
+## Language Mechanics
 
 ***
 
@@ -36,46 +36,40 @@ title: 04 - Packaging
 
 &nbsp;
 
-## ✰ Design Philosophies
+## Design Philosophies
 
 ***
 
-### ➭ Purpose
+* __Purpose__
 
-***
+  * To be __purposeful__, packages must provide, not contain.
 
-* To be __purposeful__, packages must provide, not contain.
-
-* Package must be named with the intent to describe what it provides.
+  * Package must be named with the intent to describe what it provides.
 
 &nbsp;
 
-### ➭ Usability
+* __Usability__
 
-***
+  * To be __usable__, packages must be designed with the user as their focus.
 
-* To be __usable__, packages must be designed with the user as their focus.
+  * Package must be intuitive and simple to use.
 
-* Package must be intuitive and simple to use.
+  * Packages must respect their impact on resources and performance.
 
-* Packages must respect their impact on resources and performance.
+  * Packages must protect the user's application from cascading changes.
 
-* Packages must protect the user's application from cascading changes.
+  * Packages must prevent the need for type assertion to be concrete.
 
-* Packages must prevent the need for type assertion to be concrete.
-
-* Packages must reduce, minimize and simplify its code base.
+  * Packages must reduce, minimize and simplify its code base.
 
 &nbsp;
 
-### ➭ Portability
+* __Portability__
 
-***
+  * To be __portable__, packages must be designed with reusability in mind.
 
-* To be __portable__, packages must be designed with reusability in mind.
+  * Packages must aspire for the highest level of portability.
 
-* Packages must aspire for the highest level of portability.
+  * Packages must reduce taking on opinions when it's reasonable and practical.
 
-* Packages must reduce taking on opinions when it's reasonable and practical.
-
-* Packages must not become a single point of dependency.
+  * Packages must not become a single point of dependency.

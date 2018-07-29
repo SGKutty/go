@@ -8,6 +8,8 @@ title: 18 - Primitives
 
 > In computing, language __primitives__ are the simplest elements available in a programming language. A primitive is the smallest `unit of processing` available to a programmer of a given machine, or can be an atomic element of an expression in a language.
 
+&nbsp;
+
 ## Boolean([playground](https://play.golang.org/p/_z_CE_DZbs8))
 
 ***
