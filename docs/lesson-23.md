@@ -5,7 +5,7 @@ title: 23 - Map
 ***
 
 <!-- markdownlint-disable MD002 -->
-> Maps provide a data structure that allow for the storage and management of key/value pair data.
+> __Maps__ provide a data structure that allow for the storage and management of key/value pair data.
 
 * The map key must be a value that can be used in an assignment statement.
 
@@ -89,4 +89,8 @@ title: 23 - Map
 
 &nbsp;
 
-* Reference: [youtube](https://www.youtube.com/watch?v=Tl7mi9QmLns&t=1414s_)
+## Reference
+
+***
+
+[![image](https://github.com/g-kutty/go-tour/blob/gh-pages/images/youtube.png?raw=true)](https://www.youtube.com/watch?v=Tl7mi9QmLns&t=1414s_)
