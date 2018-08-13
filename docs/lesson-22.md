@@ -20,15 +20,15 @@ title: 22 - Slice
   * Literal styles
 
     ```go
-    friends := []string{"Tony", "Cyril", "Jishnu", "Eldho"}
+      friends := []string{"Tony", "Cyril", "Jishnu", "Eldho"}
     ```
 
   * Via make function
 
     ```go
-    a := make([]int, 10) //create slice with capacity and length == 10
+      a := make([]int, 10) //create slice with capacity and length == 10
 
-    b := make([]int, 10, 100) //slice with length == 10 and capacity == 100
+      b := make([]int, 10, 100) //slice with length == 10 and capacity == 100
     ```
 * `len` function returns length of slice.
 
