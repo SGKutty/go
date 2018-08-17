@@ -36,16 +36,16 @@ title: 03 - Variables
 
 - Naming conventions
 
-  - Pascal or camelCase
+  - Pascal or camelCase.
 
-  - Capitalize acronyms (HTTP, URL etc..)
+  - Capitalize acronyms (HTTP, URL etc..).
 
-  - As short as reasonable
+  - As short as reasonable.
 
-  - Longer names for longer lives
+  - Longer names for longer lives.
 
 - Type Conversion([playground](https://play.golang.org/p/YBazA_jliwM))
 
-  - Destination type (variable)
+  - T(v) converts the value v to the type T.
 
-  - Use `strconv` package for strings
+  - Use `strconv` package for strings.

@@ -30,7 +30,7 @@ title: 04 - Primitives
 
   - `int` type has varying size.
 
-  - 8 bit(int8) through 34 bit(int64).
+  - 8 bit(int8) through 64 bit(int64).
 
 - Unsigned integers
 
@@ -46,14 +46,14 @@ title: 04 - Primitives
 
 - Can't mix types in same family! (uint16+uint32 = error).
 
-- We can combine constant and any integer family.
+- We can combine untyped constant and any integer family.
 
   ```go
     const a = 10
 
-    var b int64=20
+    var b int64 = 20
 
-    res = a+b
+    res := a + b
   ```
 
 &nbsp;
@@ -69,11 +69,11 @@ title: 04 - Primitives
 
 - Literal styles
 
-  - Decimal(`3.14`).
+  - Decimal(`3.14`)
 
-  - Exponential(`13e18` or `2E10`).
+  - Exponential(`13e18` or `2E10`)
 
-  - Mixed(`13.7e12`).
+  - Mixed(`13.7e12`)
 
 - Supported Arithmetic operations;
 
