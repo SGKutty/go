@@ -17,3 +17,7 @@ title: 08 - Struct Types
 * The dot (.) operator allows us to access individual field values.
 
 * We can create anonymous structs.
+
+* No inheritance, but can use composition via embedding([playground](https://play.golang.org/p/GA_4_P5Ik-I)).
+
+* A tag for a field allows you to attach meta-information to the field which can be acquired using reflection([playground](https://play.golang.org/p/rOSzGGPeVug)).

@@ -16,7 +16,7 @@ title: 05 - Pointers
 
 - Values in Go are always pass by value.
 
-- `Value of`, what's in the box. `Address of`( & ), where is the box.
+- Value of, what's in the box. Address of(&), where is the box.
 
 - The (*) operator declares a pointer variable and the Value that the pointer points to.
 
@@ -27,7 +27,10 @@ title: 05 - Pointers
 
 - Pointer type use an asterisk(*) as a prefix to type pointed to.
 
-  - `*int` - a pointer to an integer.
+  ```go
+    // a pointer to an integer.
+    var n *int
+  ```
 
 - Use addressof operator (&) to get address of variable .
 

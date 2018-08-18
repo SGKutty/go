@@ -8,11 +8,11 @@ title: 13 - Goroutines
 
 ➩ **Goroutines** are functions that are created and scheduled to be run independently by the Go scheduler. The Go scheduler is responsible for the management and execution of goroutines.
 
-- `Goroutines` are functions that are scheduled to run independently.
+- Goroutines are functions that are scheduled to run independently.
 
 - We must always maintain an account of running goroutines and shutdown cleanly.
 
-- `Concurrency` is not parallelism.
+- Concurrency is not parallelism.
 
   - **Concurrency** is about dealing with lots of things at once.
   
@@ -41,7 +41,7 @@ title: 13 - Goroutines
 
 - A little back pressure is good, it means there is a good balance of concerns.
 
-- A lot of back pressure is bad, it means things are `imbalanced`.
+- A lot of back pressure is bad, it means things are imbalanced.
 
 - Back pressure that is imbalanced will cause:
 
@@ -69,7 +69,7 @@ title: 13 - Goroutines
 
 ### Use timeouts to release the back pressure inside your application
 
-- No request or `task` is allowed to `take forever`.
+- No request or task is allowed to take forever.
 
 - Identify how long users are willing to wait.
 
