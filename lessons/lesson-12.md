@@ -4,7 +4,6 @@ title: 12 - Map
 ---
 ***
 
-<!-- markdownlint-disable MD002 MD022-->
 ➩ __Maps__ provide a data structure that allow for the storage and management of key/value pair data.
 
 - The map key must be a value that can be used in an assignment statement.
@@ -15,7 +14,7 @@ title: 12 - Map
 
 ## Basic Syntax
 ***
-  
+
 - Construct: `m := map[key]value{}`
 
 - Insert: `m[k] = v`

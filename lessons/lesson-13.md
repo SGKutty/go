@@ -4,8 +4,6 @@ title: 13 - Goroutines
 ---
 ***
 
-<!-- markdownlint-disable MD002 MD022-->
-
 ➩ **Goroutines** are functions that are created and scheduled to be run independently by the Go scheduler. The Go scheduler is responsible for the management and execution of goroutines.
 
 - Goroutines are functions that are scheduled to run independently.
@@ -15,7 +13,7 @@ title: 13 - Goroutines
 - Concurrency is not parallelism.
 
   - **Concurrency** is about dealing with lots of things at once.
-  
+
   - **Parallelism** is about doing lots of things at once.
 
 &nbsp;

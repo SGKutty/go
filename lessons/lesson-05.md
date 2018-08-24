@@ -4,9 +4,7 @@ title: 05 - Pointers
 ---
 ***
 
-<!-- markdownlint-disable MD002 MD022 -->
-
-➩ __Pointers__ provide a way to share data across function boundaries. Having the ability to share and reference data with a pointer provides flexbility. 
+➩ __Pointers__ provide a way to share data across function boundaries. Having the ability to share and reference data with a pointer provides flexbility.
 
 ➩ It also helps  our programs minimize the amount of memory they need and can add some extra performance.
 

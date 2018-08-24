@@ -4,8 +4,6 @@ title: 04 - Primitives
 ---
 ***
 
-<!-- markdownlint-disable MD002 MD022 -->
-
 ➩ In computing, language __primitives__ are the simplest elements available in a programming language.
 
 ➩ A primitive is the smallest `unit of processing` available to a programmer of a given machine, or can be an atomic element of an expression in a language.

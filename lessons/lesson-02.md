@@ -4,8 +4,6 @@ title: 02 - Why a new language
 ---
 ***
 
-<!-- markdownlint-disable MD002 MD022-->
-
 > During the development of **Golang**, these were the following major languages.
 
 - Java

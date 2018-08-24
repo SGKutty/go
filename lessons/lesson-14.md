@@ -4,8 +4,6 @@ title: 14 - Testing
 ---
 ***
 
-<!-- markdownlint-disable MD002 MD022-->
-
 ➩ **Testing** is built right into the go tools and the standard library. Testing needs to be a vital part of the development process because it can save you a tremendous amount of time throughout the life cycle of the project.
 
 ➩ **Benchmarking** is also a very powerful tool tied to the testing functionality. Aspect of your code can be setup to be benchmarked for performance reviews

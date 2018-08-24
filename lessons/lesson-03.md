@@ -4,8 +4,6 @@ title: 03 - Variables
 ---
 ***
 
-<!-- markdownlint-disable MD002 -->
-
 ➩ __Variables__ are at the heart of the language and provide the ability to read from and write to memory.
 
 ➩ In Go, access to memory is type safe. This means the compiler takes type seriously and will not allow us to use variables outside the scope of how they are declared.

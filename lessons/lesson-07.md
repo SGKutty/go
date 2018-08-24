@@ -4,8 +4,6 @@ title: 07 - Packaging
 ---
 ***
 
-<!-- markdownlint-disable MD002 MD022 -->
-
 > **Brian Kernighan** said,  "I think that the real problem with C is that it doesn’t give you enough mechanisms for structuring really big programs. You can simulate Object Oriented Programming or other methodology if you want, but the compiler, the language itself isn’t giving you any help"
 
 ➩ **Packaging** creates `firewalls` within Go programs such that:

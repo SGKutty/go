@@ -4,8 +4,6 @@ title: 09 - Functions
 ---
 ***
 
-<!-- markdownlint-disable MD002 MD022-->
-
 ➩ __Functions__ are at the core of the language. They provide a mechanism to group and organize our code to separate and distinct pieces of functionality.
 
 ➩ They can be used to provide an API to the packages we write and are a core component to concurrency.
