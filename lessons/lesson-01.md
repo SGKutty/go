@@ -2,9 +2,7 @@
 layout: page
 title: 01 - Setup
 ---
-
 ***
-<!-- markdownlint-disable MD002 MD022-->
 
 ## Linux, Mac OS X, and FreeBSD tarballs
 ***
@@ -94,7 +92,7 @@ title: 01 - Setup
 
 - The [GOPATH](https://golang.org/cmd/go/#hdr-GOPATH_environment_variable) environment variable lists places to look for Go code. On Unix, the value is a colon-separated string. On Windows, the value is a semicolon-separated string.
 
-- My GOPATH consists of 3 `workspaces`, The **first** one is my **landing workspace**. Since it's listed first, whenever I go get any new package, it always ends up in this workspace.
+- My GOPATH consists of 3 `workspace`, The **first** one is my **landing workspace**. Since it's listed first, whenever I go get any new package, it always ends up in this workspace.
 
 - Go searches each directory listed in GOPATH to find source code, but new packages are always downloaded into the first directory in the list.
 
