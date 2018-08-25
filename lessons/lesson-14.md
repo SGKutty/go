@@ -12,6 +12,27 @@ title: 14 - Testing
 
 &nbsp;
 
+## Basic
+***
+
+* Package <a href="https://golang.org/pkg/testing/">testing</a> provides support for automated testing of Go packages.
+
+* The test file can be in a different package or the same one.
+
+* Characteristics of a Golang test function:
+
+    * The first and only parameter needs to be t `*testing.T`.
+
+    * It begins with the word `Test` followed by a word or phrase starting with a capital letter.
+
+    * Calls `t.Error` or `t.Fail` to indicate a failure.
+
+    * `t.Log` can be used to provide non-failing debug information.
+
+    * Must be saved in a file named `something_test.go`.
+
+&nbsp;
+
 ## Code Review
 ***
 
@@ -38,6 +59,21 @@ title: 14 - Testing
         > go test -run TestParallelDownload/statusok -v
 
   - Parallel [Test](https://github.com/g-kutty/go-code/blob/master/testing/tests/example5/sub_parallel_test.go)
+
+&nbsp;
+
+## Run Test
+***
+
+*  It is intended to be used in concert with the `go test` command, which automates execution of any function of the form:
+
+    ```golang
+        func TestXxx(*testing.T)
+    ```
+
+* `go test -v` for robusticity
+
+* We can run specific test function by using `go test -run TestXxx`.
 
 &nbsp;
 
