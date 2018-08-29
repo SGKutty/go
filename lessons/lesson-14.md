@@ -12,45 +12,41 @@ title: 14 - Testing
 
 &nbsp;
 
-## Basic
+## Introduction
 ***
 
-* Package <a href="https://golang.org/pkg/testing/">testing</a> provides support for automated testing of Go packages.
+- Package [testing](https://golang.org/pkg/testing/) provides support for automated testing of Go packages.
 
-* The test file can be in a different package or the same one.
+- The test file can be in a different package or the same one.
 
-* Characteristics of a Golang test function:
+- Characteristics of a Golang test function:
 
-    * The first and only parameter needs to be t `*testing.T`.
+  - The first and only parameter needs to be t `*testing.T`.
 
-    * It begins with the word `Test` followed by a word or phrase starting with a capital letter.
+  - It begins with the word `Test` followed by a word or phrase starting with a capital letter.
 
-    * Calls `t.Error` or `t.Fail` to indicate a failure.
+  - Calls `t.Error` or `t.Fail` to indicate a failure.
 
-    * `t.Log` can be used to provide non-failing debug information.
+  - `t.Log` can be used to provide non-failing debug information.
 
-    * Must be saved in a file named `something_test.go`.
+  - Must be saved in a file named `something_test.go`.
 
 &nbsp;
 
-## Code Review
+## Testing Techniques
 ***
 
 - Basic Unit [Test](https://github.com/g-kutty/go-code/blob/master/testing/tests/example1/download_test.go).
 
 - Table Unit [Test](https://github.com/g-kutty/go-code/blob/master/testing/tests/example2/table_test.go).
 
-- Mocking [Web Server](https://github.com/g-kutty/go-code/blob/master/testing/tests/example3/web_test.go) Response.
-
-- Testing Internal [Endpoints](https://github.com/g-kutty/go-code/blob/master/testing/tests/example4/handlers/handler_test.go).
-
-- Example [Test](https://github.com/g-kutty/go-code/blob/master/testing/tests/example4/handlers/handler_example_test.go):
+- Example [Test](https://github.com/g-kutty/go-code/blob/master/testing/tests/example4/handlers/handler_example_test.go)
 
   - Example tests is also used to show `examples` in godoc.
 
     > godoc -http=:6060
 
-- Sub Tests:
+- Sub Tests
 
   - Sub [Test](https://github.com/g-kutty/go-code/blob/master/testing/tests/example5/sub_test.go)
 

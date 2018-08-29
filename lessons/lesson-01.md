@@ -7,8 +7,6 @@ title: 01 - Setup
 ## Linux, Mac OS X, and FreeBSD tarballs
 ***
 
-- [Download the archive](https://golang.org/dl/) and extract it into `/usr/local` and creating a Go tree in `/usr/local/go`.
-
   ```sh
     tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
   ```
