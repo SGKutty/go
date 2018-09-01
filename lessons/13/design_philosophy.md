@@ -3,8 +3,7 @@ layout: page
 title:
 ---
 
--> Design Guidelines
-***
+<!-- ➩ Design Guidelines -->
 
 ### The application must `startup` and `shutdown` with integrity
 
