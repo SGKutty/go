@@ -56,7 +56,7 @@ title: 12 - Map
 
 - Pointer to ith key in the bucket.
 
-    ![map_bucket](https://github.com/g-kutty/go-tour/blob/gh-pages/public/images/map_bucket.png?raw=true)
+    ![map_bucket](https://github.com/g-kutty/go-tour/lessons/12/images/map_bucket.png?raw=true)
 
 &nbsp;
 
@@ -73,14 +73,14 @@ title: 12 - Map
 
 - The process of copying is done incrementally, a little bit during each insert or      delete. during copying, operations on the map are bit more expensive.
 
-    ![map_in_go](https://github.com/g-kutty/go-tour/blob/gh-pages/public/images/map_in_go.png?raw=true)
+    ![map_in_go](https://github.com/g-kutty/go-tour/lessons/12/images/map_in_go.png?raw=true)
 
 &nbsp;
 
 ## Compare with other language
 ***
 
-  ![maps_in_other_lang](https://github.com/g-kutty/go-tour/blob/gh-pages/public/images/maps_in_other_lang.png?raw=true)
+  ![maps_in_other_lang](https://github.com/g-kutty/go-tour/lessons/12/images/maps_in_other_lang.png?raw=true)
 
 &nbsp;
 
