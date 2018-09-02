@@ -28,11 +28,11 @@ title: 13 - Goroutines
 ## How the scheduler works
 ***
 
-  ![scheduler_working](https://github.com/g-kutty/go-tour/lessons/13/images/scheduler.png?raw=true)
+  ![scheduler_working](https://g-kutty.github.io/go-tour/lessons/13/images/scheduler.png?raw=true)
 
 &nbsp;
 
 ## Difference between concurrency and parallelism
 ***
 
-  ![concurrency_vs_parallelism](https://github.com/g-kutty/go-tour/lessons/13/images/parallel.png?raw=true)
+  ![concurrency_vs_parallelism](https://g-kutty.github.io/go-tour/lessons/13/images/parallel.png?raw=true)
