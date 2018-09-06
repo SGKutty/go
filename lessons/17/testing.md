@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 15 - Testing
+title: 17 - Testing
 ---
 ***
 
@@ -61,15 +61,15 @@ title: 15 - Testing
 ## Run Test
 ***
 
-*  It is intended to be used in concert with the `go test` command, which automates execution of any function of the form:
+- It is intended to be used in concert with the `go test` command, which automates execution of any function of the form:
 
     ```golang
         func TestXxx(*testing.T)
     ```
 
-* `go test -v` for robusticity
+- `go test -v` for robusticity
 
-* We can run specific test function by using `go test -run TestXxx`.
+- We can run specific test function by using `go test -run TestXxx`.
 
 &nbsp;
 

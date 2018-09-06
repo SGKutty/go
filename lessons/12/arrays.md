@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 10 - Arrays
+title: 12 - Arrays
 ---
 ***
 
