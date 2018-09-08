@@ -4,7 +4,7 @@ title: 02 - Why a new language
 ---
 ***
 
-> During the development of **Golang**, the major languages on ground are `Java`, `Python` and `C/C++`
+During the development of **Golang**, the major languages on ground are `Java`, `Python` and `C/C++`
 
 &nbsp;
 
