@@ -6,10 +6,6 @@ title: 14 - Map
 
 ➩ __Maps__ provide a data structure that allow for the storage and management of key/value pair data.
 
-- The map key must be a value that can be used in an assignment statement.
-
-- Iterating over a map is always random.
-
 &nbsp;
 
 ## Basic Syntax
@@ -33,11 +29,32 @@ title: 14 - Map
 
 - Operation run in constant expected time.
 
+- Iterating over a map is always random.
+
 - Choose the bucket for each key so that entries are distributed as evenly as possible.
 
     ```go
     bucket = h(key)
     ```
+
+&nbsp;
+
+## Map Architecture
+***
+
+- Maps in Go are implemented as a hash table.
+
+- The hash table for a Go map is structured as an array of buckets. The number of buckets is always equal to a power of 2.
+
+- When a map operation is performed, such as `colors["Black"] = "#000000"`, a hash key is generated against the key that is specified.
+
+- The low order bits (LOB) of the generated hash key is used to select a bucket.
+
+- Once a bucket is selected, the key/value pair needs to be stored, removed or looked up, depending on the type of operation.
+
+- If we look inside any bucket, we will find two data structures. First, there is an array with the top 8 high order bits (HOB) from the same hash key. This array distinguishes each individual key/value pair stored in the respective bucket
+
+- Second, there is an array of bytes that store the key/value pairs. The byte array packs all the keys and then all the values together for the respective bucket.
 
 &nbsp;
 
