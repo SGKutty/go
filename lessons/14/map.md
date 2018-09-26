@@ -31,12 +31,6 @@ title: 14 - Map
 
 - Iterating over a map is always random.
 
-- Choose the bucket for each key so that entries are distributed as evenly as possible.
-
-    ```go
-    bucket = h(key)
-    ```
-
 &nbsp;
 
 ## Map Architecture
@@ -46,17 +40,29 @@ title: 14 - Map
 
 - The hash table for a Go map is structured as an array of buckets. The number of buckets is always equal to a power of 2.
 
-- When a map operation is performed, such as `colors["Black"] = "#000000"`, a hash key is generated against the key that is specified.
+- When a map operation is performed, such as `map[key] = value`, a hash key is generated against the key that is specified.
 
 - The low order bits (LOB) of the generated hash key is used to select a bucket.
 
+    &nbsp;
+
+    ![buckets.png](https://g-kutty.github.io/go-tour/lessons/14/images/buckets.png?raw=true)
+
+    &nbsp;
+
 - Once a bucket is selected, the key/value pair needs to be stored, removed or looked up, depending on the type of operation.
 
-- If we look inside any bucket, we will find two data structures. First, there is an array with the top 8 high order bits (HOB) from the same hash key. This array distinguishes each individual key/value pair stored in the respective bucket
+- If we look inside any bucket, we will find two data structures. __First__, there is an array with the top 8 high order bits (`HOB`) from the same hash key.
 
-- Second, there is an array of bytes that store the key/value pairs. The byte array packs all the keys and then all the values together for the respective bucket.
+- This array distinguishes each individual key/value pair stored in the respective bucket.
 
-&nbsp;
+- __Second__, there is an array of bytes that store the key/value pairs. The byte array packs all the keys and then all the values together for the respective bucket.
+
+    &nbsp;
+
+    ![map_hash_table.png](https://g-kutty.github.io/go-tour/lessons/14/images/map_hash_table.png?raw=true)
+
+    &nbsp;
 
 ## Map lookup implementation
 ***
@@ -73,7 +79,7 @@ title: 14 - Map
 
 - Pointer to ith key in the bucket.
 
-    ![map_bucket](https://g-kutty.github.io/go-tour/lessons/14/images/map_bucket.png?raw=true)
+    ![bucket.png](https://g-kutty.github.io/go-tour/lessons/14/images/bucket.png?raw=true)
 
 &nbsp;
 
@@ -90,14 +96,14 @@ title: 14 - Map
 
 - The process of copying is done incrementally, a little bit during each insert or      delete. during copying, operations on the map are bit more expensive.
 
-    ![map_in_go](https://g-kutty.github.io/go-tour/lessons/14/images/map_in_go.png?raw=true)
+    ![map_arch.png](https://g-kutty.github.io/go-tour/lessons/14/images/map_arch.png?raw=true)
 
 &nbsp;
 
 ## Compare with other language
 ***
 
-  ![maps_in_other_lang](https://g-kutty.github.io/go-tour/lessons/14/images/maps_in_other_lang.png?raw=true)
+  ![comparison.png](https://g-kutty.github.io/go-tour/lessons/14/images/comparison.png?raw=true)
 
 &nbsp;
 
