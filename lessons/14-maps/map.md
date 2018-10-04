@@ -33,7 +33,7 @@ title: 14 - Map
 
 &nbsp;
 
-## Map Architecture
+## Map lookup implementation
 ***
 
 - Maps in Go are implemented as a hash table.
@@ -46,7 +46,7 @@ title: 14 - Map
 
     &nbsp;
 
-    ![buckets.png](https://g-kutty.github.io/go-tour/lessons/14/images/buckets.png?raw=true)
+    ![buckets.png](https://g-kutty.github.io/go-tour/lessons/14-maps/images/buckets.png?raw=true)
 
     &nbsp;
 
@@ -60,31 +60,36 @@ title: 14 - Map
 
     &nbsp;
 
-    ![map_hash_table.png](https://g-kutty.github.io/go-tour/lessons/14/images/map_hash_table.png?raw=true)
+    ![map_hash_table.png](https://g-kutty.github.io/go-tour/lessons/14-maps/images/map_hash_table.png?raw=true)
 
     &nbsp;
 
-## Map lookup implementation
+- When we are `iterating` through a map, the iterator walks through the array of buckets and then return the key/value pairs in the order they are laid out in the byte array. This is why maps are unsorted collections.
+
+- The hash keys determines the walk order of the map because they determine which buckets each key/value pair will end up in.
+
+    &nbsp;
+
+    ![bucket.png](https://g-kutty.github.io/go-tour/lessons/14-maps/images/bucket.png?raw=true)
+
+    &nbsp;
+
+## Memory and Bucket Overflow
 ***
 
-- `hash` := hashfn(key)
+- There is a reason to pack all the keys and then all the values together. If the keys and values were stored like key/value/key/value, `padding` allocations between each key/value pair would be needed to maintain proper alignment boundaries.
 
-- `bucket` := hash % nbuckets
+- An example where this would apply is with a map that looks like this:
 
-- `extra` := top 8 bits of hash
+    ```go
+    map[int64]int8
+    ```
 
-- `b` := &m.buckets[bucket]
+- To learn more about `alignment` boundaries, [Go](https://g-kutty.github.io/go-tour/lessons/19-understanding_types/types/)
 
-- Check 8 extra bits.
+- The 1 byte value in this map would result in 7 extra bytes of padding per key/value pair. By packing the key/value pairs as key/key/value/value, the padding only has to be appended to the end of the byte array and not in between.
 
-- Pointer to ith key in the bucket.
-
-    ![bucket.png](https://g-kutty.github.io/go-tour/lessons/14/images/bucket.png?raw=true)
-
-&nbsp;
-
-## Growing the map
-***
+- Eliminating the padding bytes saves the bucket and the map a good amount of memory.
 
 - When buckets get too full, we need to grow the map.
 
@@ -96,14 +101,14 @@ title: 14 - Map
 
 - The process of copying is done incrementally, a little bit during each insert or      delete. during copying, operations on the map are bit more expensive.
 
-    ![map_arch.png](https://g-kutty.github.io/go-tour/lessons/14/images/map_arch.png?raw=true)
+    ![map_arch.png](https://g-kutty.github.io/go-tour/lessons/14-maps/images/map_arch.png?raw=true)
 
 &nbsp;
 
 ## Compare with other language
 ***
 
-  ![comparison.png](https://g-kutty.github.io/go-tour/lessons/14/images/comparison.png?raw=true)
+  ![comparison.png](https://g-kutty.github.io/go-tour/lessons/14-maps/images/comparison.png?raw=true)
 
 &nbsp;
 

@@ -1,22 +1,22 @@
 ---
 layout: page
-title: 19 - Understanding Type in Go
+title:
 ---
 ***
 
 - The Go language provides these basic `numeric` types:
 
   ```sh
-    * Unsigned Integers: uint8, uint16, uint32, uint64
+  Unsigned Integers: uint8, uint16, uint32, uint64
 
-    * Signed Integers: int8, int16, int32, int64
+  Signed Integers: int8, int16, int32, int64
 
-    * Real Numbers: float32, float64
+  Real Numbers: float32, float64
 
-    * Predeclared Integers: uint, int, uintptr
+  Predeclared Integers: uint, int, uintptr
   ```
 
-- The names for these keywords provide both pieces of the type `information`.
+- The names for these keywords provide both pieces of the type information.
 
 - The uint8 contains a `base` 10 number using one byte of `memory`. The value can be between 0 to 255.
 
