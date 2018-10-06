@@ -52,4 +52,4 @@ title:
 
 - So when Go determines the memory allocation for our structs, it will `pad` bytes to make sure the final memory footprint is a multiple of 8. The compiler will determine where to add the padding.
 
-- This [program](https://github.com/g-kutty/go-code/blob/master/language/structs/example5/example5.go) shows the padding that Go inserted into the memory footprint for the Example type struct:
+- This [program](https://github.com/g-kutty/go-code/blob/master/language/3-padding/example2.go) shows the padding that Go inserted into the memory footprint for the Example type struct:
