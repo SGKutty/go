@@ -94,7 +94,9 @@ h2 {
   margin-top: 2rem;
   margin-bottom: 0rem;
   font-size: 1.5rem;
-  line-height: 0.5;
+  /* white-space:nowrap; */
+  /* overflow: auto; */
+  /* line-height: 0.5; */
 }
 h3 {
   margin-top: 1.5rem;
@@ -175,8 +177,8 @@ pre {
 }
 pre code {
   padding: 0;
-  font-size: 100%;
-  color: inherit;
+  font-size: 90%;
+  color: #033636cf;
   background-color: transparent;
 }
 
