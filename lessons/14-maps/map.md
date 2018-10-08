@@ -4,32 +4,32 @@ title: 14 - Map
 ---
 ***
 
-➩ __Maps__ provide a data structure that allow for the storage and management of key/value pair data.
-
-&nbsp;
-
-## Basic Syntax
+## Introduction
 ***
 
-- Construct: `m := map[key]value{}`
-
-- Insert: `m[k] = v`
-
-- Lookup: `v = m[k]`
-
-- Delete: `delete(m, k)`
-
-- Iterate: `for k, v := range m`
-
-- Size: `len(m)`
-
-- Availability: `_, ok := m[k]`
+- __Maps__ provide a data structure that allow for the storage and management of key/value pair data.
 
 - Key type must have an == operation (no map, slice, or func as key).
 
 - Operation run in constant expected time.
 
 - Iterating over a map is always random.
+
+- Operations:
+
+  - __Construct__ : m := map[key]value{}
+
+  - __Insert__ : m[k] = v
+
+  - __Lookup__ : v = m[k]
+
+  - __Delete__ : delete(m, k)
+
+  - __Iterate__ : for k, v := range m
+
+  - __Size__ : len(m)
+
+  - __Availability__ : _, ok := m[k]
 
 &nbsp;
 
@@ -85,25 +85,42 @@ title: 14 - Map
     map[int64]int8
     ```
 
-- To learn more about `alignment` boundaries, [Go](https://g-kutty.github.io/go-tour/lessons/19-understanding_types/types/)
-
 - The 1 byte value in this map would result in 7 extra bytes of padding per key/value pair. By packing the key/value pairs as key/key/value/value, the padding only has to be appended to the end of the byte array and not in between.
 
-- Eliminating the padding bytes saves the bucket and the map a good amount of memory.
+- Eliminating the padding bytes saves the bucket and the map a good amount of memory. To learn more about alignment boundaries, read this post [![go_to.png](https://g-kutty.github.io/go-tour/public/images/go_to.png?raw=true)](https://g-kutty.github.io/go-tour/lessons/19-understanding_types/index)
 
-- When buckets get too full, we need to grow the map.
+- A bucket is configured to store only 8 key/value pairs. Is a ninth key needs to be added to a bucket that is full, an overflow bucket is created and refernce from inside the respective bucket.
 
-  - Allocate a new array of buckets of twice the size.
+    &nbsp;
+    ![growing_bucket.png](https://g-kutty.github.io/go-tour/lessons/14-maps/images/growing_bucket.png?raw=true)
+    &nbsp;
 
-  - Copy entires over form the old buckets to the new buckets.
+- As we continue to add or remove key/value pairs from the map, the efficiency of the map lookups begin to deteriorate. The load threshold values that determine when to grow the hash table are based on these four factors:
 
-  - Use the new buckets.
+  - __Overflow__ : Percentage of buckets which have an overflow bucket.
+  - __bytes/entry__ : Number of overhead bytes used per key/value pair.
+  - __hitprobe__ : Number of entries that need to be checked when looking up a key.
+  - __missprobe__ : Number of entries that need to be checked when looking up an absent key.
 
-- The process of copying is done incrementally, a little bit during each insert or      delete. during copying, operations on the map are bit more expensive.
+- Growing the hash table starts with assigning a pointer called the "old bucket" pointer to the current bucket array.
 
+- Then a new bucket array is allocated to hold `twice` the number of existing buckets. This could result in large allocations, but the memory is not initialized so the allocation is fast.
+
+- Once the memory for the new bucket array is available, the key/value pairs from the old bucket array can be moved or "evacuated" to the new bucket array.
+
+- Evacuations happens as key/value pairs are added or removed from the map. The key/value pairs that are together in an old bucket could be moved to different buckets inside the new bucket array.
+
+- The evacuation algorithm attempts to distribute the key/value pairs evenly across the new bucket array.
+
+    &nbsp;
+    ![map_growing.png](https://g-kutty.github.io/go-tour/lessons/14-maps/images/map_growing.png?raw=true)
+    &nbsp;
+
+- This is a very delicate dance because iterators still need to run through the old bucket has been evacuated. This also affects how key/value pairs are returned during iteration operations. A lot of care has been taken to make sure iterators work as the map grows and expands.
+
+    &nbsp;
     ![map_arch.png](https://g-kutty.github.io/go-tour/lessons/14-maps/images/map_arch.png?raw=true)
-
-&nbsp;
+    &nbsp;
 
 ## Compare with other language
 ***
