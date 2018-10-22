@@ -154,7 +154,7 @@ title:
     Next      = Size: 1 Offset: 0 Addr: 0xc0000160f9
   ```
 
-- Substract the two address and you will see there is an 8 byte difference between the two type struct allocations. Go padding 7 bytes to the struct to maintain the alignment boundary.
+- Subtract the two address and you will see there is an 8 byte difference between the two type struct allocations. Go padding 7 bytes to the struct to maintain the alignment boundary.
 
 - We can only manipulate memory when we are working with a numeric type and the assignment operator (=) is how we do it. To make life easier for us, Go has created some complex types that support the assignment operator directly. Some of these types are strings, arrays and slices. To see a complete list of these types check out this [document](https://golang.org/ref/spec#Types).
 

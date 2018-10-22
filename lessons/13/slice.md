@@ -1,10 +1,10 @@
 ---
 layout: page
-title: 13 - Slice
+title: 14 - Slice
 ---
 ***
 
-➩ __Slices__ are an incredibly important data structure in Go. They form the basis for how we manage and manipulate data in a flexible, performant and dynamic way. It is incredibly important for all Go programmers to learn how to uses slices.
+➩ __Slices__ are an incredibly important data structure in Go. They form the basis for how we manage and manipulate data in a flexible, performing and dynamic way. It is incredibly important for all Go programmers to learn how to uses slices.
 
 &nbsp;
 

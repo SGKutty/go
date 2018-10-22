@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 14 - Map
+title: 15 - Map
 ---
 ***
 
@@ -89,7 +89,7 @@ title: 14 - Map
 
 - Eliminating the padding bytes saves the bucket and the map a good amount of memory. To learn more about alignment boundaries, read this post [![go_to.png](https://g-kutty.github.io/go-tour/public/images/go_to.png?raw=true)](https://g-kutty.github.io/go-tour/lessons/19-understanding_types/index)
 
-- A bucket is configured to store only 8 key/value pairs. Is a ninth key needs to be added to a bucket that is full, an overflow bucket is created and refernce from inside the respective bucket.
+- A bucket is configured to store only 8 key/value pairs. Is a ninth key needs to be added to a bucket that is full, an overflow bucket is created and reference from inside the respective bucket.
 
     &nbsp;
     ![growing_bucket.png](https://g-kutty.github.io/go-tour/lessons/14-maps/images/growing_bucket.png?raw=true)
