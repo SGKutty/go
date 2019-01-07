@@ -44,7 +44,7 @@ title:
 
 - The bool is one byte, the int16 is 2 bytes and the float32 adds 4 more bytes. However, `8 bytes` are `actually` allocated in memory for this struct.
 
-- All memory is allocated on an alignment boundary to minimize memory [defragmentation](https://g-kutty.github.io/go-tour/lessons/20-memory_management/defragmentation/).
+- All memory is allocated on an alignment boundary to minimize memory [defragmentation](https://george-kj.github.io/go-tour/lessons/20-memory_management/defragmentation/).
 
 - To determine the alignment boundary Go is using for your architecture, you can run the `unsafe.Alignof` function.
 
@@ -52,7 +52,7 @@ title:
 
 - So when Go determines the memory allocation for our structs, it will `pad` bytes to make sure the final memory footprint is a multiple of 8. The compiler will determine where to add the padding.
 
-- This [program](https://github.com/g-kutty/go-code/blob/master/language/structs/3-padding/example2/example.go) shows the padding that Go inserted into the memory footprint for the Example type struct.
+- This [program](https://github.com/george-kj/go-code/blob/master/language/structs/3-padding/example2/example.go) shows the padding that Go inserted into the memory footprint for the Example type struct.
 
   ```go
     type Example struct {
@@ -184,15 +184,15 @@ title:
 
 - What I am trying to do is get the memeory address of the 2 byte IntValue field and store it in a pointer of type int32.
 
-    ![memory_1.png](https://g-kutty.github.io/go-tour/lessons/19-understanding_types/images/memory_1.png?raw=true)
+    ![memory_1.png](https://george-kj.github.io/go-tour/lessons/19-understanding_types/images/memory_1.png?raw=true)
 
 - Then I am trying to use the pointer to write 4 byte integer into that memory address. If I was able to use that pointer, I would be voilating the type rules for the IntValue field and corrupting memory along the way.
 
-    ![memory_2.png](https://g-kutty.github.io/go-tour/lessons/19-understanding_types/images/memory_2.png?raw=true)
+    ![memory_2.png](https://george-kj.github.io/go-tour/lessons/19-understanding_types/images/memory_2.png?raw=true)
 
 - Based on the memory footprint above, the pointer would be writing the value of 20 across the 4 bytes between FFE3 and FFE6.
 
-    ![memory_3.png](https://g-kutty.github.io/go-tour/lessons/19-understanding_types/images/memory_3.png?raw=true)
+    ![memory_3.png](https://george-kj.github.io/go-tour/lessons/19-understanding_types/images/memory_3.png?raw=true)
 
 - The value of IntValue would be 20 as expected but the value of FloatValue would now be 0. Imagine if writing those bytes went outside the memory allocation for this struct and started to corrupt memory in other areas of the application. The bugs that would follow would appear random and unpredictable.
 

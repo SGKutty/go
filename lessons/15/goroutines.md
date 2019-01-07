@@ -21,18 +21,18 @@ title: 16 - Goroutines
 ## Design Guidelines
 ***
 
-- Learn about the design [guidelines](https://g-kutty.github.io/go-tour/lessons/15/design_philosophy) for concurrency.
+- Learn about the design [guidelines](https://george-kj.github.io/go-tour/lessons/15/design_philosophy) for concurrency.
 
 &nbsp;
 
 ## How the scheduler works
 ***
 
-  ![scheduler_working](https://g-kutty.github.io/go-tour/lessons/15/images/scheduler.png?raw=true)
+  ![scheduler_working](https://george-kj.github.io/go-tour/lessons/15/images/scheduler.png?raw=true)
 
 &nbsp;
 
 ## Difference between concurrency and parallelism
 ***
 
-  ![concurrency_vs_parallelism](https://g-kutty.github.io/go-tour/lessons/15/images/parallel.png?raw=true)
+  ![concurrency_vs_parallelism](https://george-kj.github.io/go-tour/lessons/15/images/parallel.png?raw=true)

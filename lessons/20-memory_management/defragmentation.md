@@ -8,4 +8,4 @@ title:
 
 - Defragmentation reduces data access time and allows storage to be used more efficiently.
 
-    ![doc_a.png](https://g-kutty.github.io/go-tour/lessons/20-memory_management/images/defragmentation.png?raw=true)
+    ![doc_a.png](https://george-kj.github.io/go-tour/lessons/20-memory_management/images/defragmentation.png?raw=true)

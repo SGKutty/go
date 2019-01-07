@@ -36,11 +36,11 @@ title: 18 - Testing
 ## Testing Techniques
 ***
 
-- Basic Unit [Test](https://github.com/g-kutty/go-code/blob/master/testing/tests/example1/download_test.go).
+- Basic Unit [Test](https://github.com/george-kj/go-code/blob/master/testing/tests/example1/download_test.go).
 
-- Table Unit [Test](https://github.com/g-kutty/go-code/blob/master/testing/tests/example2/table_test.go).
+- Table Unit [Test](https://github.com/george-kj/go-code/blob/master/testing/tests/example2/table_test.go).
 
-- Example [Test](https://github.com/g-kutty/go-code/blob/master/testing/tests/example4/handlers/handler_example_test.go)
+- Example [Test](https://github.com/george-kj/go-code/blob/master/testing/tests/example4/handlers/handler_example_test.go)
 
   - Example tests is also used to show `examples` in godoc.
 
@@ -48,13 +48,13 @@ title: 18 - Testing
 
 - Sub Tests
 
-  - Sub [Test](https://github.com/g-kutty/go-code/blob/master/testing/tests/example5/sub_test.go)
+  - Sub [Test](https://github.com/george-kj/go-code/blob/master/testing/tests/example5/sub_test.go)
 
     - Real power of sub test, we can limit test case by name.
 
         > go test -run TestParallelDownload/statusok -v
 
-  - Parallel [Test](https://github.com/g-kutty/go-code/blob/master/testing/tests/example5/sub_parallel_test.go)
+  - Parallel [Test](https://github.com/george-kj/go-code/blob/master/testing/tests/example5/sub_parallel_test.go)
 
 &nbsp;
 

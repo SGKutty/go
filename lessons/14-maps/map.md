@@ -46,7 +46,7 @@ title: 15 - Map
 
     &nbsp;
 
-    ![buckets.png](https://g-kutty.github.io/go-tour/lessons/14-maps/images/buckets.png?raw=true)
+    ![buckets.png](https://george-kj.github.io/go-tour/lessons/14-maps/images/buckets.png?raw=true)
 
     &nbsp;
 
@@ -60,7 +60,7 @@ title: 15 - Map
 
     &nbsp;
 
-    ![map_hash_table.png](https://g-kutty.github.io/go-tour/lessons/14-maps/images/map_hash_table.png?raw=true)
+    ![map_hash_table.png](https://george-kj.github.io/go-tour/lessons/14-maps/images/map_hash_table.png?raw=true)
 
     &nbsp;
 
@@ -70,7 +70,7 @@ title: 15 - Map
 
     &nbsp;
 
-    ![bucket.png](https://g-kutty.github.io/go-tour/lessons/14-maps/images/bucket.png?raw=true)
+    ![bucket.png](https://george-kj.github.io/go-tour/lessons/14-maps/images/bucket.png?raw=true)
 
     &nbsp;
 
@@ -87,12 +87,12 @@ title: 15 - Map
 
 - The 1 byte value in this map would result in 7 extra bytes of padding per key/value pair. By packing the key/value pairs as key/key/value/value, the padding only has to be appended to the end of the byte array and not in between.
 
-- Eliminating the padding bytes saves the bucket and the map a good amount of memory. To learn more about alignment boundaries, read this post [![go_to.png](https://g-kutty.github.io/go-tour/public/images/go_to.png?raw=true)](https://g-kutty.github.io/go-tour/lessons/19-understanding_types/index)
+- Eliminating the padding bytes saves the bucket and the map a good amount of memory. To learn more about alignment boundaries, read this post [![go_to.png](https://george-kj.github.io/go-tour/public/images/go_to.png?raw=true)](https://george-kj.github.io/go-tour/lessons/19-understanding_types/index)
 
 - A bucket is configured to store only 8 key/value pairs. Is a ninth key needs to be added to a bucket that is full, an overflow bucket is created and reference from inside the respective bucket.
 
     &nbsp;
-    ![growing_bucket.png](https://g-kutty.github.io/go-tour/lessons/14-maps/images/growing_bucket.png?raw=true)
+    ![growing_bucket.png](https://george-kj.github.io/go-tour/lessons/14-maps/images/growing_bucket.png?raw=true)
     &nbsp;
 
 - As we continue to add or remove key/value pairs from the map, the efficiency of the map lookups begin to deteriorate. The load threshold values that determine when to grow the hash table are based on these four factors:
@@ -113,23 +113,23 @@ title: 15 - Map
 - The evacuation algorithm attempts to distribute the key/value pairs evenly across the new bucket array.
 
     &nbsp;
-    ![map_growing.png](https://g-kutty.github.io/go-tour/lessons/14-maps/images/map_growing.png?raw=true)
+    ![map_growing.png](https://george-kj.github.io/go-tour/lessons/14-maps/images/map_growing.png?raw=true)
     &nbsp;
 
 - This is a very delicate dance because iterators still need to run through the old bucket has been evacuated. This also affects how key/value pairs are returned during iteration operations. A lot of care has been taken to make sure iterators work as the map grows and expands.
 
     &nbsp;
-    ![map_arch.png](https://g-kutty.github.io/go-tour/lessons/14-maps/images/map_arch.png?raw=true)
+    ![map_arch.png](https://george-kj.github.io/go-tour/lessons/14-maps/images/map_arch.png?raw=true)
     &nbsp;
 
 ## Compare with other language
 ***
 
-  ![comparison.png](https://g-kutty.github.io/go-tour/lessons/14-maps/images/comparison.png?raw=true)
+  ![comparison.png](https://george-kj.github.io/go-tour/lessons/14-maps/images/comparison.png?raw=true)
 
 &nbsp;
 
 ## Reference
 ***
 
-[![image](https://g-kutty.github.io/go-tour/public/images/youtube.png?raw=true)](https://www.youtube.com/watch?v=Tl7mi9QmLns&t=1414s_)
+[![image](https://george-kj.github.io/go-tour/public/images/youtube.png?raw=true)](https://www.youtube.com/watch?v=Tl7mi9QmLns&t=1414s_)
